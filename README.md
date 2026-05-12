@@ -2,7 +2,6 @@
 
 > A fully-featured, modern remake of the classic Snake game built with **vanilla HTML5, CSS3, and JavaScript** — no frameworks, no dependencies.
 
-![Game Over Screen](./screenshot.png)
 
 ---
 
@@ -136,7 +135,7 @@ Sound can be toggled with the `🔊` button (top right) or by pressing `M`.
 
 | Start Screen | Gameplay | Game Over |
 |---|---|---|
-| *(start overlay)* | *(snake in action)* | ![Game Over](./screenshot.png) |
+| *(start overlay)* | *(snake in action)* |
 
 ---
 
@@ -150,6 +149,4 @@ Pull requests welcome! Some ideas for future additions:
 
 ---
 
-## 📄 License
 
-MIT © 2025 — Free to use, modify, and distribute.
