@@ -131,13 +131,6 @@ Sound can be toggled with the `🔊` button (top right) or by pressing `M`.
 
 ---
 
-## 📸 Screenshots
-
-| Start Screen | Gameplay | Game Over |
-|---|---|---|
-| *(start overlay)* | *(snake in action)* |
-
----
 
 ## 🤝 Contributing
 
