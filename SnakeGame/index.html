@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SNAKO-SNAKI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="themeBar">
+        <span class="theme-label">THEME</span>
+        <button class="theme-btn active" data-theme="neon" title="Neon">⚡</button>
+        <button class="theme-btn" data-theme="retro" title="Retro">👾</button>
+        <button class="theme-btn" data-theme="dark" title="Dark">🌑</button>
+        <button class="theme-btn" data-theme="pastel" title="Pastel">🌸</button>
+    </div>
+
+    <button id="soundToggle" title="Toggle Sound">🔊</button>
+
+    <div id="hud">
+        <div class="hud-card">
+            <div class="hud-label">SCORE</div>
+            <div class="hud-value" id="scoreBox">0</div>
+        </div>
+        <div class="hud-card">
+            <div class="hud-label">LEVEL</div>
+            <div class="hud-value" id="levelBox">1</div>
+        </div>
+        <div class="hud-card">
+            <div class="hud-label">HI-SCORE</div>
+            <div class="hud-value" id="hiscoreBox">0</div>
+        </div>
+    </div>
+
+    <div id="powerupDisplay"></div>
+
+    <div id="boardWrapper">
+
+        <canvas id="board" width="500" height="500"></canvas>
+
+        <div id="startScreen" class="overlay">
+            <div class="overlay-box">
+                <div class="overlay-title">🐍 SNAKO-SNAKI</div>
+                <div class="overlay-subtitle">THE ULTIMATE SNAKE</div>
+
+                <div class="key-hints">
+                    <span>↑↓←→ Move</span>
+                    <span>SPACE Pause</span>
+                    <span>S Save</span>
+                    <span>L Load</span>
+                </div>
+
+                <div class="food-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot normal"></span> Normal +1
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot bonus"></span> Bonus +5
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot poison"></span> Poison -2
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot powerup"></span> Power-up!
+                    </div>
+                </div>
+
+                <button class="btn-play" id="startBtn">▶ START GAME</button>
+            </div>
+        </div>
+
+        <div id="gameOverScreen" class="overlay hidden">
+            <div class="overlay-box">
+                <div class="overlay-title">💀 GAME OVER</div>
+
+                <div id="finalScore" class="final-score"></div>
+                <div id="newHiScore" class="new-hiscore hidden">
+                    🏆 NEW HIGH SCORE!
+                </div>
+
+                <button class="btn-play" id="restartBtn">↺ PLAY AGAIN</button>
+                <button class="btn-secondary" id="saveBtn">💾 SAVE SCORE</button>
+            </div>
+        </div>
+
+        <div id="pauseScreen" class="overlay hidden">
+            <div class="overlay-box">
+                <div class="overlay-title">⏸ PAUSED</div>
+                <div class="overlay-subtitle">Press SPACE to resume</div>
+
+                <button class="btn-secondary" id="saveGameBtn">💾 Save Game</button>
+                <button class="btn-secondary" id="loadGameBtn">📂 Load Game</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="mobileControls">
+        <div class="dpad">
+            <button class="dpad-btn dpad-up" data-dir="up">▲</button>
+
+            <div class="dpad-row">
+                <button class="dpad-btn dpad-left" data-dir="left">◀</button>
+                <div class="dpad-center">🐍</div>
+                <button class="dpad-btn dpad-right" data-dir="right">▶</button>
+            </div>
+
+            <button class="dpad-btn dpad-down" data-dir="down">▼</button>
+        </div>
+
+        <button class="mobile-pause-btn" id="mobilePauseBtn">⏸</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
